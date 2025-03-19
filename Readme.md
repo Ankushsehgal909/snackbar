@@ -1,3 +1,7 @@
+
+
+
+
 # 🌟 CommonPaperSnackbar
 
 A sleek, reusable **React Native snackbar** component powered by React Native Paper and the Animated API. Perfect for delivering stylish, animated notifications to your users! 🎉
@@ -19,7 +23,6 @@ A sleek, reusable **React Native snackbar** component powered by React Native Pa
 ## 🛠️ Installation
 
 1. Install the required dependencies:
-
    ```bash
    npm install react-native-vector-icons react-native-paper
    ```
@@ -36,9 +39,8 @@ A sleek, reusable **React Native snackbar** component powered by React Native Pa
 ## 🚀 Usage
 
 ### Basic Example
-
 ```javascript
-import CommonPaperSnackbar from "./components/CommonPaperSnackbar";
+import CommonPaperSnackbar from './components/CommonPaperSnackbar';
 
 function MyComponent() {
   return (
@@ -52,11 +54,9 @@ function MyComponent() {
 ```
 
 ### With Context Provider
-
 Manage your snackbar like a pro with `SnackbarProvider`:
-
 ```javascript
-import { SnackbarProvider, useSnackbar } from "./context/SnackbarContext";
+import { SnackbarProvider, useSnackbar } from './context/SnackbarContext';
 
 function App() {
   return (
@@ -83,15 +83,15 @@ function MyComponent() {
 
 ## 📋 Props
 
-| Prop            | Type     | Default     | Description                          |
-| --------------- | -------- | ----------- | ------------------------------------ |
-| `visible`       | boolean  | `false`     | Show or hide the snackbar.           |
-| `message`       | string   | `""`        | The text to display.                 |
-| `type`          | string   | `"info"`    | `info`, `success`, or `error` style. |
-| `duration`      | number   | `3000`      | Time (ms) before auto-dismiss.       |
-| `onDismiss`     | function | `() => {}`  | Callback when snackbar hides.        |
-| `actionText`    | string   | `"Dismiss"` | Action button text.                  |
-| `onActionPress` | function | `null`      | Action button callback.              |
+| Prop            | Type     | Default      | Description                                     |
+|-----------------|----------|--------------|-------------------------------------------------|
+| `visible`       | boolean  | `false`      | Show or hide the snackbar.                     |
+| `message`       | string   | `""`         | The text to display.                           |
+| `type`          | string   | `"info"`     | `info`, `success`, or `error` style.           |
+| `duration`      | number   | `3000`       | Time (ms) before auto-dismiss.                 |
+| `onDismiss`     | function | `() => {}`   | Callback when snackbar hides.                  |
+| `actionText`    | string   | `"Dismiss"`  | Action button text.                            |
+| `onActionPress` | function | `null`       | Action button callback.                        |
 
 ---
 
@@ -100,9 +100,9 @@ function MyComponent() {
 With `SnackbarProvider`, you get these handy tools via `useSnackbar`:
 
 - **`showSnackbar(message, type, duration, actionText, onActionPress)`**  
-  Pop up a snackbar with your custom settings!
+  Pop up a snackbar with your custom settings!  
 - **`hideSnackbar()`**  
-  Hide it manually whenever you want.
+  Hide it manually whenever you want.  
 - **`isConnected`**  
   Check network status with this boolean.
 
@@ -111,7 +111,6 @@ With `SnackbarProvider`, you get these handy tools via `useSnackbar`:
 ## 🎨 Styling
 
 Pre-built with flair:
-
 - **Position**: Anchored 20px from the screen bottom.
 - **Shadow**: Material Design elevation for depth.
 - **Corners**: Smooth 12px border radius.
@@ -120,9 +119,7 @@ Pre-built with flair:
 - **Width**: Responsive, maxing out at `screen width - 32px`.
 
 ### Customize It! ✂️
-
 Tweak the `styles` object or `getBackgroundColor` to change:
-
 - Colors 🌈
 - Spacing 📏
 - Fonts ✍️
@@ -143,7 +140,6 @@ Tweak the `styles` object or `getBackgroundColor` to change:
 ## 🌟 Real-World Example
 
 Check out how it shines in the `Login` component:
-
 ```javascript
 const { showSnackbar, isConnected } = useSnackbar();
 
@@ -158,7 +154,6 @@ const onSubmit = async (data) => {
 ```
 
 Displays:
-
 - Network alerts 🚨
 - Success messages ✅
 - Error feedback ❌
@@ -175,17 +170,3 @@ Displays:
 ---
 
 Enjoy adding this beautiful snackbar to your app! Let it notify your users in style! ✨
-
-```
-
----
-
-### What’s Improved?
-1. **Emojis**: Added relevant emojis to make sections pop and feel lively.
-2. **Headings**: Used bold and colorful separators (`---`) for better structure.
-3. **Tone**: Kept it professional yet friendly and approachable.
-4. **Visual Appeal**: Enhanced code blocks, tables, and lists with consistent formatting.
-5. **Clarity**: Simplified explanations without losing detail.
-
-Copy this into your `README.md` file, and it’ll look stunning in any Markdown viewer (like GitHub)! Let me know if you’d like more tweaks! 😊
-```
